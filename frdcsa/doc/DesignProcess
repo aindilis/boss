@@ -1,0 +1,77 @@
+# The  current  design  process  is  one  that  favors  the  following
+# techniques.   This is  not an  optimal design  process, but  this is
+# simply a log for now of which techniques are being used, and whether
+# there are successful or not.  But I suppose it could not hurt to put
+# this in a formal manner.
+
+date Sun Mar 21 16:25:14 EST 2004
+
+
+
+Criteria::Requirements
+
+Requirements are generally thought of during usage, and put in
+existing places where they might do some good.  This includes the
+following files:
+
+	$FRDCSAHOME/thoughts
+	$FRDCSAHOME/todo
+	$FRDCSAHOME/source/myfrdcsa/Thoughts
+
+
+
+Criteria::Solutions
+
+Solutions  are generally discovered  as a  mixture of  Exploration and
+Exploitation.   (See   Reinforcement  Learning,  MITECS).   Generally,
+solutions  are built  by  continuously organizing  information into  a
+useful form.
+
+The   benefits   of  this   process   are   increased  retention   and
+specialization of tasks.
+
+The cons  of this process are  much work and  constant reformatting of
+information.
+
+However, it is assumed here that this process is the most efficient we
+have.
+
+
+Criteria::ProjectCreation;
+
+Solutions  that are  proposed  to specific  problems  that are  rather
+general and seem to be good for a new project or source are created in
+their respective hatcheries.  If  these projects are then established,
+they are incorporated into the main archives.
+
+However,  oftentimes, a  project turns  out to  be a  special  case of
+another project.  Where to draw the  line is not always clear.  In the
+case of  whether a project is  really a subproject of  another one, it
+may  be  moved into  it  and  reintegrated.   However, sometimes,  the
+project it is a part of is not  very far along and so it is kept where
+it is, to avoid making an overly deep hierarchy.
+
+Tools  for  managing the  interelation  of  projects  and sources  are
+currently among the projects and sources and are developing well.
+
+
+
+Technique::ProjectBuilding;
+
+The current strategies that are most often applied are:
+
+Creating a source package which can be packaged for Debian.
+
+Note: As MyFRDCSA  grows, it will be very  mindful of source packages.
+In fact, I wouldn't be surprised if we performed nightly builds of all
+systems.
+
+The main components of projects now are:
+
+	control or README	# project description
+	Makefile	# project makefile
+	project.el	# emacs file containing all relevant emacs functions, modes, etc.
+	project.subl	# SubL specification of knowledge relevant to the organization of the project.
+	project.pl	# the Perl script which invokes the projects Perl functionality
+	PROJECT/	# Perl Classes for the project
+	doc/		# DocBook documentation of the project

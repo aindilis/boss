@@ -1,0 +1,73 @@
+<system>
+  <title>BOSS</title>
+  <acronym-expansion>
+    Boosting Open Source Software
+  </acronym-expansion>
+  <short-description>
+    Software engineering manager for project management
+  </short-description>
+  <medium-description>
+    BOSS coordinates the software development of our internal
+    codebases, the applications that we are writing to either
+    effectively glue together external codebases as in most cases or
+    as mostly independent projects (like Gourmet).  BOSS converses
+    with Architect to coordinate development of icodebases with
+    respect to overall goals, and RADAR and Machiavelli to provide a
+    project development simulator for use in reasoning about other
+    projects, and in general, to answer software development
+    questions.  BOSS also automates many of the aspects of writing
+    codebases.
+  </medium-description>
+  <long-description>
+  <ul>
+    <li>
+      It is an agent,  which communicates over (UniLang/FL/etc.) which
+      is responsible  for several tasks related to  source and project
+      management/development.
+    </li>
+    <li>
+      Handle setup of preferences for tools used in creating software.
+    </li>
+    <li>
+      Ability   to    create   project,   or   to    run   tests   and
+      recommend/implement  changes to project  structure to  make them
+      compatible with our development model.
+    </li>
+    <li>
+      Have  an  update-rc.d like  system  that  handles the  following
+      things: It scans  a project for information about  hooks that it
+      must register with the system  BEFORE they get packaged, so that
+      we can test,  develop and use these features,  without having to
+      build and install the package for every single change, i.e.
+    </li>
+    <li>
+      Yet, when the package is installed, it intelligent selects which
+      hooks ought to  be activated between the package  and the source
+      system, on certain criteria, and allows hot swapping.
+    </li>
+    <li>
+      Create an FRDCSA distribution CD or DVD on demand.  Perhaps, use
+      KNOPPIX as a starter.
+    </li>
+  </ul>
+  </long-description>
+  <todolist>
+    <todo>
+      Make sure the Emacs source file is autoloaded from Emacs
+    </todo>
+    <todo>Make sure the binaries are linked to in the path.</todo>
+    <todo>Make sure the documentation is indexed.</todo>
+    <todo>Make sure the Perl Modules are in @INC.</todo>
+  <recommends>
+    openafs-client
+  </recommends>
+
+  <synonyms>
+    Software  Engineer,  Developer,  Leader, Boss,  Manager,  Software
+    Engineering Manager, Project Management
+  </synonyms>
+  </todolist>
+    <links>
+    <link>http://asg.web.cmu.edu/isam/</link>
+  </links>
+</system>

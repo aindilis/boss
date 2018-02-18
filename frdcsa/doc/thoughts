@@ -1,0 +1,182 @@
+?He who cannot change the very fabric of his thought will never be
+able to change reality, and will never, therefore, make any progress.?
+-Anwar Sadat
+
+(G. Branden Robinson                |    Build a fire for a man, and he'll
+Debian GNU/Linux                   |    be warm for a day.  Set a man on
+branden@debian.org                 |    fire, and he'll be warm for the
+http://people.debian.org/~branden/ |    rest of his life. - Terry Pratchett)
+
+(I think I  ought to work a little on getting  what Damian said, about
+getting )
+
+(It is  absolutely ridiculous to allege  that the man  who cannot see,
+cannot hear and who is on  a wheelchair can constitute a threat to the
+biggest military  power in the Middle  East and one of  the biggest in
+the world. That's absolutely nonsense. (sounds like Lao Tsu))
+
+(Authorities issued an  Amber Alert, and said there  is nothing in the
+boy's background to  indicate he might have run  away. (what are these
+indicators?) (I found this out  later.  The indicators are typically a
+broken home, alcohol abuse, death in the family, etc.))
+
+(to do all the things i am thinking about would take quite a while.  I
+am still  quite rushed on  SHOPS.  I think  I ought to  spend tomorrow
+just getting the old version to work for the new purposes.)
+
+(I am going to go ahead and work on PSE.  I have just gotten alot done
+with Gourmet, but it  sort of depends now on PSE.  I  think I could go
+ahead and study  logic programming right now, and  that might be good,
+but I don't think I would get it all, whereas right now I still have a
+good idea of what is needed.   So I will pursue getting what is needed
+done.)
+
+(there  is some  functionality I  ought  to have  rather soon.)   
+
+(the  Unilang   system  working  at  a  basic   level,  prompting  and
+redirecting messages to appropriate places.)
+
+(a system to reduce bad habits
+	(writing notes for other to read)
+	(reading media, visitin web  sites directly and not through my
+		system)
+	(talking to other people))
+
+(some effort  should be made to  identify bad habits  that result from
+personal qualities, and  bad habits that are forced  on people.  I see
+now  that it  simple because  we can  simply list  those  factors that
+getting  rid of  a  bad habit  depends on  in  PSE, and  then have  it
+calculate how to get rid of the bad habit - I think this is especially
+important,  because it  might  be  able to  actually  make some  valid
+computational solution that might have been missed.)
+
+(as an interesting note, suppose a  goal is listed as : stop ear plugs
+from hurting.  in trying to assign a value to such a thing, the system
+can  take information  from  other things,  for  instance manager,  or
+doctor, or whatever the system is that manages a specific thing.)
+
+(It's bad, but I see a great opportunity in terms of creating projects
+simply by renaming  the HUMAN occupation for it,  for example: doctor,
+ontologist,  gourmet,  manager,  diplomat,  etc.  I  suppose  this  is
+analogous to  the analogy  of using parts  of biological  organisms to
+document  and anticipate  required functionality.   Again, it  is neat
+because you could even exert an evolutionary mechanism to the process.
+But  perhaps this  is  why all  these  agent systems  use things  like
+"societies",  like Cougaar.   It would  be worth  learning  more about
+cougar.)
+
+(perhaps I  will get  fed up  with always writing  my thoughts  into a
+single shell.  probably not though.)
+
+(add logging  and log  examination capabiltiy to  UniLang, as  well as
+convenient  formal restrictions  on  the language  - not  compromising
+however, the  universality and the  ability to recognize and  react to
+any information supplied to it.)
+
+(consider generic methods of handling references to data, for instance
+file names, URL, etc.)
+
+(in  addition to  PSE,  there has  to  be some  kind  of system  which
+represents belief in world state, for instance, where is Rachel, etc.)
+
+(capabilities recording system)
+
+(maybe the ITS should be  called mentor, actually, it should be called
+names that are estimated to, and empirically cooberated, appeal to the
+public at large, but also, renamed to appeal to individuals!!!)
+
+
+
+
+
+(this is what was on MSN
+	(Spotlight: Is Paris' muumuu a boo-boo?)
+	I  cannot  wait  until   I  can  finally  dispense  with  that
+bullshit.)
+
+
+(program  to determine  which manuals  are likely  to be  of interest,
+based on  previous scores.  In  general, a recommender system  of this
+sort.)
+
+(the  first  is,  again,  in  reading  any  sufficiently  thought  out
+document,  it is  formal enough  to make  it easy  to  understand, and
+moreover, the  complexity of understanding  it is simple enough  to be
+put into an ontological format.  (we can create a program that creates
+knowledge bases using the following architecture:
+
+(first, prompt for a topic)
+
+(use a topic builder like vivisimo to create the dimensions of the topic)
+
+(search for documents on that topic, sort by LSA or some other measure 
+	of the  above mentioned  property of formal  clarity.)  
+
+(using  some  measure  of  information  gain, create  a  strategy  for
+selecting  sentences,  etc,  (maybe  use  a  summarizer)  to  drive  a
+clarification dialog  which prompt the user to  answer questions about
+the  exact meaning  of sentences  (this  eliminates the  need for  any
+sophisticated statistical, etc  inferencing method, although it should
+be employed if possible.))))
+
+(obvious remarks on education
+	(It is not  enough to have a complete  concept ontology of the
+topic, but you  must necessarily have at least  as much information on
+the psychology of the student,  because it is necessary to empirically
+corroborate which kinds of concepts the user understands))
+
+(The Search For Artificial Intelligence)
+(AIX should  create a  live linux  distro called AIX  with all  of our
+packages.)
+
+(should  have software  to make  sure that  you wean  yourself  of bad
+habits, and replace them with good habits.  the user defines what is a
+good and or bad habit.)
+
+(when it senses that productivity is low, schedule routine stuff)
+
+(Unilang::ScheduleAction "")
+
+(Exists Unilang::SubLAPT::generate-phrase)
+
+(Is it better for Debian in the long run to force people to use Debian
+by releasing all these packages only  in deb format, or to give people
+the choice among apt-rpm and rpm packages as well?)
+
+(are the  usage summaries  automatically generated, say  for instance,
+apt-get's)
+
+(what is a good tutorial on UML/OO Perl/OO/Java/etc.)
+
+(how can I build and use phrase dictionaries/ontologies?)
+
+(how do make a shell script into a daemon as in /etc/init.d?)
+
+
+I have  had lots of thoughts  - the ones here  escape current indexing
+capabilities, and  so we bring them  together here and use  this as an
+oracle of design choices.
+
+(categorization must learn all of  the concepts behind a given system.
+This means,  every syntactic construct  must be understood by  user at
+all levels.  This means, surjectively, breaking the data down into its
+components and analyzing them.)
+
+(reputation-management
+
+ (by integrating reputations of various  components, such as for a deb
+source, the authors,  the website, the sources location,  we should be
+able to get reliable reputation information)
+
+ (there is another kind  of reputation-management that deals with what
+other  people  think of  you,  and  how to  modify  that,  so that  is
+something that we should look at.))
+
+(add to emacs  the capability to search for  named entities, like, for
+instance: "C-M-s & d a t e" would find the next date)
+
+(all of the tools here should  be designed around the goal of creating
+common,  sharable,  centralized knowledge  bases.   For instance,  the
+gourmet  program should  have  such  a capability  that  it creates  a
+centralized  repository   for  recipe  information.    This  could  be
+achieved via p2p or other architectures.)

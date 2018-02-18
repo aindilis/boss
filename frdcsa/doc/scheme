@@ -1,0 +1,29 @@
+packages/binary
+packages/source
+packages/partial
+codebases/external
+codebases/internal
+projects
+sandbox
+
+
+drwxrwsr-x   3 root     staff        4096 Mar 24 15:33 ..
+lrwxrwxrwx   1 root     staff          38 May  4 08:52 BOSS -> /home/jasayne/frdcsa/source/boss/BOSS/
+lrwxrwxrwx   1 root     staff          46 Apr 14 02:57 Clair -> /home/jasayne/frdcsa/source/clairvoyance/Clair
+lrwxrwxrwx   1 root     staff          42 Apr 30 03:19 Corpus -> /home/jasayne/frdcsa/source/corpus/Corpus/
+lrwxrwxrwx   1 root     staff          41 Apr 14 02:57 Critic -> /home/jasayne/frdcsa/source/critic/Critic
+lrwxrwxrwx   1 root     staff          44 Apr 14 03:18 Gourmet -> /home/jasayne/frdcsa/source/gourmet/Gourmet/
+lrwxrwxrwx   1 root     staff          37 Apr 14 02:57 KBFS -> /home/jasayne/frdcsa/source/kbfs/KBFS
+lrwxrwxrwx   1 root     staff          44 May  3 12:05 Manager -> /home/jasayne/frdcsa/source/manager/Manager/
+lrwxrwxrwx   1 root     staff          46 Apr 18 23:56 MyFRDCSA -> /home/jasayne/frdcsa/source/myfrdcsa/MyFRDCSA/
+lrwxrwxrwx   1 root     staff          50 Apr 14 02:57 OpenCyc -> /home/jasayne/frdcsa/source/opencyc-common/OpenCyc
+lrwxrwxrwx   1 root     staff          35 Apr 14 02:57 PSE -> /home/jasayne/frdcsa/source/pse/PSE
+lrwxrwxrwx   1 root     staff          50 Apr 14 03:38 Packager -> /home/jasayne/frdcsa/source/auto-package/Packager/
+lrwxrwxrwx   1 root     staff          44 May 21 17:53 PerlLib -> /home/jasayne/frdcsa/source/perllib/PerlLib/
+lrwxrwxrwx   1 root     staff          46 Apr 24 23:46 Predator -> /home/jasayne/frdcsa/source/predator/Predator/
+lrwxrwxrwx   1 root     staff          40 Apr 14 03:19 RADAR -> /home/jasayne/frdcsa/source/radar/RADAR/
+lrwxrwxrwx   1 root     staff           4 Apr 18 23:50 Rec -> Rec/
+lrwxrwxrwx   1 root     staff          46 May  6 21:14 Sorcerer -> /home/jasayne/frdcsa/source/sorcerer/Sorcerer/
+-rw-r--r--   1 root     staff       17150 May  6 21:14 TAGS
+lrwxrwxrwx   1 root     staff          43 Apr 14 02:57 UniLang -> /home/jasayne/frdcsa/source/unilang/UniLang
+lrwxrwxrwx   1 root     staff           5 May 23 01:40 pwd\` -> pwd\`

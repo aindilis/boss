@@ -1,0 +1,40 @@
+#!/usr/bin/perl -w
+
+use strict;
+use FileHandle;
+
+if (@ARGV == 0) {
+  print "usage: nmzgrep [egrep's options] <pattern> [index]...\n";
+  exit 1;
+}
+
+my @opts = ();
+while (defined $ARGV[0] && $ARGV[0] =~ /^-/) {
+  push @opts, $ARGV[0];
+  shift @ARGV;
+}
+
+if (@ARGV == 0) {
+  print "usage: nmzgrep [egrep's options] <pattern> [index]...\n";
+  exit 1;
+}
+
+my $pattern = shift @ARGV;
+my @indices = @ARGV;
+my $command = "namazu -alR '$pattern' @indices | xargs egrep @opts '$pattern' /dev/null";
+
+print $command."\n";
+
+if (1) {
+  my $fh = new FileHandle;
+  $fh->open("$command |");
+  if (defined $fh) {
+    while (<$fh>) {
+      print;
+    }
+  } else {
+    die "nmzgrep: $!";
+  }
+}
+
+exit 0;

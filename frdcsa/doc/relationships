@@ -1,0 +1,6 @@
+(subsys acmestudio myfrdcsa)
+(needs predator auto-apt) ;; to determine which packages a system needs
+(needs predator debuild)
+(depends dome python2.3-4suite)
+(could-use machiavelli http://www.aktors.org/technologies/artequakt/)
+(relevant-document )

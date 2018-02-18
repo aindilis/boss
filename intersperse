@@ -1,0 +1,10 @@
+#!/usr/bin/perl -w
+
+foreach my $arg (@ARGV) {
+  $arg =~ s/\P{IsAlpha}//g;
+  $arg =~ s//\.\*/g;
+  # $arg =~ s/^\.\*//;
+  my $command = "grep -E \'".$arg."' /usr/share/dict/american-english-large";
+  print "$command\n";
+  system $command;
+}

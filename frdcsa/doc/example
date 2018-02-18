@@ -1,0 +1,73 @@
+This file  is an example  of a  file I wrote  by combining a  bunch of
+other files together,  having no clue what I was  doing, and it worked
+perfectly the  first time  I tested it.   My response was  "That never
+happens."
+
+
+package UniLang::Server;
+use IO::Socket;
+use IO::Select;
+use IO::Handle;
+use Net::hostent;
+use Net::Telnet;
+
+use strict;
+use Carp;
+use vars qw($VERSION);
+
+$VERSION = '1.00';
+
+use Class::MethodMaker new_with_init => 'new',
+  get_set => [ qw / Server Clients ReadSet / ];
+
+sub init {
+  my ($self,%args) = (shift,@_);
+  $self->ReadSet(IO::Select->new());
+  $self->Start;
+  $self;
+}
+
+sub AddClient {
+  my ($self,$client) = (shift,shift);
+  $self->ReadSet->add($client);
+}
+
+sub Start {
+  my ($self,%args) = (shift,@_);
+  my $PORT = 9000;
+  my $server = IO::Socket::INET->new( Proto     => 'tcp',
+				      LocalPort => $PORT,
+				      Listen    => SOMAXCONN,
+				      Reuse     => 1);
+
+  die "can't setup server" unless $server;
+  $self->Server($server);
+  print "[Server $0 accepting clients]\n";
+
+  $self->ReadSet->add($self->Server);
+
+  while (1) {
+    my ($buf, @handles);
+    my $timeout = 1;
+    do {
+      @handles = $self->ReadSet->can_read($timeout);
+    } while (!@handles);
+    foreach my $handle (@handles) {
+      if ($handle eq $self->Server) {
+	my $client = $self->Server->accept();
+	$self->AddClient($client);
+	$client->autoflush(1);
+	print $client "Welcome to UniLang server: $0.\n";
+	my $hostinfo = gethostbyaddr($client->peeraddr);
+	printf "[Connect from %s]\n", $hostinfo->name || $client->peerhost;
+	print $client "UniLang: Version $VERSION\n";	  
+      } else {
+	$buf = <$handle>;
+	$buf =~ s/\r//g;
+	print "<<<$buf>>>\n";
+      }
+    }
+  }
+}
+
+1;

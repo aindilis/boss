@@ -1,0 +1,35 @@
+<!ELEMENT trellis (purpose, conclusion, statement*)>
+
+<!ELEMENT purpose (#PCDATA)>
+<!ELEMENT conclusion (#PCDATA)>
+<!ELEMENT statement (lelement*,relation?,relement*,qualifier?,reason?,stsource?,substatements*)>
+
+<!ELEMENT lelement (title, link, data)>
+<!ELEMENT relation (#PCDATA)>
+<!ELEMENT relement (title, link, data)>
+<!ELEMENT qualifier (#PCDATA)>
+<!ELEMENT reason (relement)>
+<!ELEMENT substatements (statement*)>
+<!ELEMENT stsource (title?, link?, data?, creator?, subject?, description?, publisher?, contributor?, date?, type?, format?, identifier?, source?, language?, relation?, coverage?, rights?, credibility?, credreason?, reliability?, relreason?)>
+
+<!ELEMENT reliability (#PCDATA)>
+<!ELEMENT relreason (element)>
+<!ELEMENT credibility (#PCDATA)>
+<!ELEMENT credreason (element)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT link (#PCDATA)>
+<!ELEMENT data (#PCDATA)>
+<!ELEMENT creator (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT publisher (#PCDATA)>
+<!ELEMENT contributor (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT format (#PCDATA)>
+<!ELEMENT identifier (#PCDATA)>
+<!ELEMENT source (#PCDATA)>
+<!ELEMENT language (#PCDATA)>
+<!ELEMENT coverage (#PCDATA)>
+<!ELEMENT rights (#PCDATA)>

@@ -1,0 +1,3 @@
+;; A PDDL domain to describe what operations should happen in BOSS, before others, etc.
+
+(action UPDATE-LINKS)

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" 
+"file:///usr/share/sgml/docbook/dtd/xml/4.1.2/docbookx.dtd" [
+<!ENTITY legal SYSTEM "legal.xml">
+]>
+<book>
+  <title>
+  </title>
+  <bookinfo>
+    <author>
+      <firstname></firstname>
+      <surname></surname>
+    </author>
+  </bookinfo>
+  <toc>
+  </toc>
+  <chapter>
+    <title>
+    </title>
+    <sect1>
+      <title>
+      </title>
+      <para>
+      </para>
+    </sect1>
+  </chapter>
+</book>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="system">
+    <xs:complexType>
+      <xs:sequence>
+	<xs:element name="title" type="xs:string"/>
+	<xs:element name="additional-names" type="xs:string" minOccurs="0" maxOccurs="1"/>
+	<xs:element name="acronym-expansion" type="xs:string" minOccurs="0" maxOccurs="1"/>
+	<xs:element name="slogan" type="xs:string" minOccurs="0" maxOccurs="1"/>
+	<xs:element name="pi" type="xs:string" minOccurs="0" maxOccurs="1"/>
+	<xs:element name="short-description" type="xs:string"/>
+	<xs:element name="medium-description">
+	  <xs:complexType mixed="true">
+            <xs:sequence minOccurs="0">
+	      <xs:element name="p" type="xs:string" minOccurs="0"/>
+	      <xs:element name="summary" type="xs:string"/>
+	      <xs:element name="relationship" type="xs:string"/>
+	      <xs:element name="lay-description" type="xs:string"/>
+	    </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	<xs:element name="long-description">
+          <xs:complexType mixed="true">
+            <xs:sequence minOccurs="0">
+              <xs:element name="p" type="xs:string" minOccurs="0"/>
+              <xs:element name="intro" type="xs:string"/>
+              <xs:element name="provides">
+		<xs:complexType>
+		  <xs:sequence>
+		    <xs:element name="capability" type="xs:string"/>
+		  </xs:sequence>
+		</xs:complexType>
+	      </xs:element>
+	      <xs:element name="relationships">
+		<xs:complexType>
+		  <xs:sequence>
+		    <xs:element name="subsystems" type="xs:string"/>
+		    <xs:element name="supersystems" type="xs:string"/>
+		    <xs:element name="package-dependencies" type="xs:string"/>
+		    <xs:element name="other-dependencies" type="xs:string"/>
+		  </xs:sequence>
+		</xs:complexType>
+	      </xs:element>
+              <xs:element name="technical-description" type="xs:string"/>
+	      <xs:choice>
+		<xs:element name="relevant-description" type="xs:string"/>
+		<xs:element name="relevant-information" type="xs:string"/>
+	      </xs:choice>
+              <xs:element name="conclusion" type="xs:string"/>
+              <xs:element name="links">
+		<xs:complexType>
+		  <xs:sequence>
+		    <xs:element name="link" type="xs:string"/>
+		  </xs:sequence>
+		</xs:complexType>
+	      </xs:element>
+	    </xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+	<xs:element name="misc" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema> 

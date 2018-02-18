@@ -1,0 +1,19 @@
+#!/usr/bin/perl -w
+
+use APP;
+
+use UniLang::Agent::Agent;
+use UniLang::Util::Message;
+
+$UNIVERSAL::agent = UniLang::Agent::Agent->new
+  (Name => "APP",
+   ReceiveHandler => \&Receive);
+$UNIVERSAL::app = APP->new();
+
+sub Receive {
+  my %args = @_;
+  $UNIVERSAL::app->ProcessMessage
+    (Message => $args{Message});
+}
+
+$UNIVERSAL::app->Execute();

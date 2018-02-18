@@ -1,0 +1,9 @@
+(find-or-create-constant "BOSSKb")
+(cyc-assert '(#$isa #$BOSSKb #$Microtheory) #$BaseKB)
+
+;; (find-or-create-constant "InvolvedWith")
+;; find the exact relationship from the ontology
+
+(find-or-create-constant "JustinCoslor")
+(cyc-assert '(#$isa #$JustinCoslor #$Researcher) #$BOSSKb)
+

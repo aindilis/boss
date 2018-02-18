@@ -1,0 +1,134 @@
+<circdepends>
+  <intro>
+    <p>
+      With the FRDCSA, the completion  of every project depends on the
+      completion  of  every  project.    This  has  gotten  to  be  so
+      pervasive, that I've decided to record the instances.
+    </p>
+    <p>
+      Miai?
+    </p>
+    <p>
+      This is how you know projects are important. - Justin
+    </p>
+    <p>
+      This lets  you know  that the projects  are eigenvectors  in the
+      solution transformation.  (Catch 22)
+    </p>
+  </intro>
+  <circdepend>
+    <overview>
+      CoAuthor - CoAuthor is a system for integrating a large set of
+      diverse documents into a coherent whole.  When used in
+      conjunction with CLEAR, it makes it very easy for people to
+      digest a large group of documents in a directory.  We wish for
+      Justin to know how he can help with the development of CoAuthor.
+      The documents that explain how it works are scattered all
+      throughout the system itself.  Therefore, in order for Justin to
+      help with CoAuthor within a reasonable time frame, we require
+      CoAuthor to work.
+    </overview>
+    <workaround>
+      Have Justin manually traverse tree and read documents himself.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      I wrote a script  to install dependencies automatically for perl
+      scripts.   However,  this  script  dependended on  script  which
+      dependended on Net::SSH.
+    </overview>
+    <workaround>
+      Install manually first using apt-get.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      Wanted to  record an idea  essential to Speech  recognition, but
+      computer  was stashed.  Therefore,  speech recognition  would be
+      useful.
+    </overview>
+    <workaround>
+      Unstash computer, and type it in by hand.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      /var/lib/myfrdcsa/codebases/internal/predator/scripts $ sudo radar install Sort::Versions
+      Subroutine IO::Handle::blocking redefined at /usr/share/perl5/LWP/Conn/_Connect.pm line 43.
+      Prototype mismatch: sub IO::Handle::blocking ($;$) vs none at /usr/share/perl5/LWP/Conn/_Connect.pm line 43.
+      Can't locate Sort/Versions.pm in @INC (@INC contains: /etc/perl /usr/local/lib/perl/5.8.4 /usr/local/share/perl/5.8.4 /usr/lib/perl5 /usr/share/perl5 /usr/lib/perl/5.8 /usr/share/perl/5.8 /usr/local/lib/site_perl /usr/local/lib/perl/5.8.3 /usr/local/share/perl/5.8.3) at /usr/local/share/perl/5.8.3/Predator/CodeBase.pm line 7.
+      BEGIN failed--compilation aborted at /usr/local/share/perl/5.8.3/Predator/CodeBase.pm line 7.
+      Compilation failed in require at /usr/local/share/perl/5.8.3/Predator/CodeBases.pm line 3.
+      BEGIN failed--compilation aborted at /usr/local/share/perl/5.8.3/Predator/CodeBases.pm line 3.
+      Compilation failed in require at /usr/local/share/perl/5.8.3/Predator.pm line 3.
+      BEGIN failed--compilation aborted at /usr/local/share/perl/5.8.3/Predator.pm line 3.
+      Compilation failed in require at /usr/local/share/perl/5.8.3/RADAR/CLI.pm line 18.
+      BEGIN failed--compilation aborted at /usr/local/share/perl/5.8.3/RADAR/CLI.pm line 18.
+      Compilation failed in require at /usr/bin/radar line 6.
+      BEGIN failed--compilation aborted at /usr/bin/radar line 6.
+    </overview>
+    <workaround>
+      Remove it temporarily.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      Need to write gourmet in order to eat well.  Need to eat well in order to write gourmet.
+    </overview>
+    <workaround>
+      Obtained assistance eating while writing Gourmet.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      Write a nice backup sytem, however, if system crashes before first backups are done...
+    </overview>
+    <workaround>
+      Hope.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      Need system  for planning  out what needs  to get done  when and
+      where.  But to develop that system, it is needed.
+    </overview>
+    <workaround>
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      Have a system to warn me when  I am not on task well enough.  In
+      writing the system however, I got off task.
+    </overview>
+    <workaround>
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+      For the system-implementor, we wished to use the model based
+      design techniques described in the Handbook for Knowledge
+      Representation.  Of course, the first system we wished to
+      implement with the system-implementor was the model based design
+      and diagnostic system.
+    </overview>
+    <workaround>
+      Either manually codify the domain, using the manual encoding of
+      the system-implementor as the first training example
+      (i.e. mapping from document to code or precode) for the
+      system-implementor.
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+    </overview>
+    <workaround>
+    </workaround>
+  </circdepend>
+  <circdepend>
+    <overview>
+    </overview>
+    <workaround>
+    </workaround>
+  </circdepend>
+</circdepends>

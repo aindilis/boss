@@ -1,0 +1,14 @@
+#!/usr/bin/perl -w
+
+use PerlLib::SwissArmyKnife;
+
+my $command = "/var/lib/myfrdcsa/codebases/internal/boss/scripts/namazu/my-nmzgrep ".shell_quote($ARGV[0])." -f /var/lib/myfrdcsa/codebases/internal/boss/scripts/namazu/namazurc";
+print $command."\n";
+system $command;
+if (0) {
+  my $res = `$command`;
+  foreach my $line (split /\n/, $res) {
+    $line =~ s/^.*://;
+    print $line."\n";
+  }
+}

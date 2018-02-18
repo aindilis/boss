@@ -1,0 +1,176 @@
+# KB
+(isa Project Collection)
+(isa subProject Transitivebinaryrelation)
+
+(find-or-create-constant "Project")
+(isa Project Collection)
+
+(find-or-create-constant "SoftwareSystem")
+(isa SoftwareSystem )
+
+(find-or-create-constant "ResearchGroup")
+(isa SoftwareSystem Collection)
+
+
+(isa DoughertysResearchGroup ResearchGroup)
+(isa ProjectRadar Project)
+(isa ProjectOpenCyc Project)
+(isa OpenCycSoftware SoftwareSystem)
+(projectDeliverable ProjectOpenCyc OpenCycSoftware)
+(hasVersion OpenCycSoftware "0.7.0")
+(hasDebianPackage OpenCycSoftware "0.7.0" "opencyc-0.7.0")
+(hasSoftware ProjectOpenCyc OpenCycSoftware)
+
+;; Different types of Projects
+(genls LocalProject Project)
+(genls UpstreamProject Project)
+
+;; Different types of Packages
+
+(isa CorruptPackage PackageStatus)
+(isa CompletedPackage PackageStatus)
+(isa IncompletePackage PackageStatus)
+(exclusivePredicates CompletedPackage IncompletePackage)
+
+(isa DateReleased PackageAttributes)
+(isa DateCompleted PackageAttributes)
+
+()
+
+(hasAquired GroupFRDCSA )
+
+;; PROJECTS				
+
+;; Axioms for Projects  
+(implies 
+ (and
+  (isa UpstreamProject ?PROJECT)
+  (projectDeliverable ?PROJECT ?SOFTWARE))
+ (isa ?SOFTWARE UpstreamSoftware))
+
+(implies
+ (and
+  (subProject ?PROJ1 ?PROJ2)
+  (subProject ?PROJ2 ?PROJ3))
+ (subProject ?PROJ1 ?PROJ3))
+
+(implies
+ (immediateSubProject ?PROJ1 ?PROJ2)
+ (subProject ?PROJ1 ?PROJ2))
+
+(find-or-create-constant "LocalProject")
+(find-or-create-constant "UpstreamProject")
+(genls LocalProject Project)
+(genls UpstreamProject Project)
+
+;; Sample Project Associations
+
+(isa ProjectRadar LocalProject)
+(isa ProjectOpenCyc UpstreamProject)
+
+(isa ProjectMyFRDCSA LocalProject)
+(subProject ProjectRadar ProjectMyFRDCSA)
+
+(debianPackageName )
+
+(genls UpstreamProjectSoftware ProjectSoftware)
+(genls LocalProjectSoftware ProjectSoftware)
+
+(upstreamSoftwareURL OpenCycSoftware "0.7.0" "http://")
+(upstreamProjectURL ProjectOpenCyc "http://www.opencyc.org")
+(upstreamProjectURL ProjectOpenCyc "http://www.opencyc.org")
+
+(hasAuthor OpenCycSoftware StephenGiles)
+(hasEmail StephenGiles "sgile@cyc.com")
+
+
+;; This section is to clarify the usage of certain concepts such as
+;; package dependency.
+
+(isa FRDCSA Database)
+;; (implementation-of FRDCSA)
+;; (installation-of (implementation-of FRDCSA))
+;; (product-of (implementation-of FRDCSA))
+;; (package-for (product-of (implementation-of FRDCSA)))
+;; (package-of (files-for (implementation-of FRDCSA)))
+;; (project-website-for (implementation-of FRDCSA))
+
+(genls UpstreamProject)
+(url ProjectRadar )
+(isa Project X)
+
+
+
+;; Tag Set Mappings for Annotation
+
+(isa NAMEX ResearchGroup)
+(isa NAMEX SoftwareSystem)
+(isa NAMEX SoftwareVersion)
+(isa NAMEX SoftwareAuthor)
+(isa NAMEX ResearchGroupURL)
+(isa NAMEX SoftwareSystemURL)
+(isa NAMEX SoftwareVersionURL)
+
+;; RADAR architectural components 
+
+(isa DerivativeSoftware Software)
+(transitivePredicate DerivativeSoftware)
+
+
+;; This is to detail the arrangements of the software directories:
+;; distinguish between locally developed packages and external
+
+
+(isa debian-source-package FileType)
+(isa debian-binary-package FileType)
+(isa source-archive FileType)
+(isa binary-archive FileType)
+
+(if
+    (and
+     (isa ?x debian-source-package)
+     (in-location ?x apt-sources))
+    (immediately-goes ?x debian-source-packages))
+
+(if
+    (and
+     (isa ?x debian-binary-package)
+     (in-location ?x apt-sources))
+    (immediately-goes ?x debian-binary-packages))
+
+(if
+    (and
+     (isa ?x source-archive)
+     (in-location ?x radar-archives))
+    (immediately-goes ?x source-archives))
+
+(if
+    (and
+     (isa ?x binary-archive)
+     (in-location ?x radar-archives))
+    (immediately-goes ?x binary-archives))
+
+(if
+    (and
+     (isa ?x debian-source-package)
+     (in-location ?x radar-archives))
+    (immediately-goes ?x debian-source-packages))
+
+(if
+    (and
+     (isa ?x debian-binary-package)
+     (in-location ?x radar-archives))
+    (immediately-goes ?x debian-binary-packages))
+
+sources deb-sources
+binaries deb-sources
+deb-sources debs
+project subproject
+ideas subproject
+subproject prog
+prog sources
+
+clonedSystem
+subSystem
+hasFeature
+possessesFeatures

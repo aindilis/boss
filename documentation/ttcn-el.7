@@ -1,0 +1,114 @@
+.TH ttcn\-el 7 2000\-07\-28 Development 
+.SH NAME
+ttcn\-el \- GNU Emacs modes for protocol testing languages.
+.SH SYNOPSIS
+\fBttcn\-3\-mode\fR
+.PP
+\fBttcn\-mode\fR
+.PP
+\fBtm\-functions\fR
+.SH DESCRIPTION
+The programming modes ttcn\-3\-mode,
+ttcn\-mode, and
+tm\-functions for GNU Emacs are for programming
+in the TTCN\-3, core language (Testing and Test Control Notation
+\- 3), TTCN.MP format (Tree and Tabulart Combined Notation), or
+the Test Manager scripts, an enhancement to the Forth
+programming language, used in the Tektronix
+K1297 protocol tester.
+.PP
+The TTCN\-3 programming mode
+(ttcn\-3\-mode, file
+\fBttcn3.el\fR) does indentation, code
+colourisation (so\-called font\-locking) and gives you an index of
+test cases and other important definitions via the
+Module\-Index. With the command
+ttcn3\-parse you can run an external
+TTCN3Parser or ttthreeparser, if available. The keywords are
+according to the TTCN\-3 BNF of 2001\-10. To switch off the logo
+splash screen, set the variable
+ttcn3\-show\-logo to nil
+in your \fB~/.emacs\fR file. The logo is by
+Patrick Andrieu, the ASCII art version by W. Borgert. This mode
+is based on CC Mode, please look in
+the CC Mode documentation for further
+information.
+.PP
+The TTCN.MP programming mode (ttcn\-mode,
+file \fBttcn.el\fR) is not for writing test
+suites from scratch, but for fixing small errors or doing little
+changes or just looking at the MP format. No indentation is
+done, but some code colourisation, an index, and a menu with
+some navigation functions are given. Note: For large test
+suites startup might become very slow.
+.PP
+If one want that GNU Emacs treats files with the
+\fB\&.mp\fR extension automatically as
+TTCN.MP files instead of MetaPost files, add the following
+lines to your \fB~/.emacs\fR file:
+
+.nf
+(setq auto\-mode\-alist
+	  (cons '("\\\\.mp\\\\'" . ttcn\-mode) auto\-mode\-alist))
+.fi
+
+.PP
+The Test Manager programming functions
+(tm\-functions, file \fBtm.el\fR)is
+an addition to the Forth programming mode
+(forth\-mode, file
+\fBforth.el\fR). It includes only minor
+additions to the regular Forth mode, i.e. font\-locking, index
+menu, and support of the Test Manager specific words.
+.PP
+To enable the tm\-functions by default,
+add the following line to your
+\fB~/.emacs\fR:
+
+.nf
+(add\-hook 'forth\-mode\-hook 'tm\-functions)
+      
+.fi
+.SH FILES
+All lisp source files are in
+\fB/usr/share/emacs/site\-lisp/ttcn\-el/\fR.
+.SH AUTHOR
+These programmes are made by W. Borgert
+<debacle@debian.org>, as well as this
+documentation.
+.SH THANKS
+All important ideas and some code are taken from other
+GNU Emacs modes, and adapted to work with TTCN\-3, TTCN.MP and
+Test Manager files. Thanks to Csaba Koppany and Theofanis
+Vassiliou\-Gioles for valuable hints on current TTCN\-3 keywords
+and regular expressions.
+.SH COPYRIGHT
+Copyright 2000 W. Borgert and released under the
+GNU General Public License
+(GPL). Permission is granted to copy,
+distribute and/or modify this document under the terms of the
+GNU Free Documentation License, Version 1.1;
+with no Invariant Sections, no Front\-Cover Texts and no
+Back\-Cover Texts.
+.SH BUGS
+The indentation is not correct in many cases.
+.SH HISTORY
+Version 0.6 released on 2001\-10\-10. Updated
+keywords.
+.PP
+Version 0.5 released on 2001\-05\-05. Updated
+keywords.
+.PP
+Version 0.4 released on 2001\-02\-02. Calls external
+parser.
+.PP
+Version 0.3 released on 2001\-01\-31.
+\fBttcn3.el\fR should now work with GNU Emacs
+21.0 and XEmacs 21.1, too.
+.PP
+Version 0.2 released on 2000\-07\-28. Includes updates for
+TTCN\-3 keywords in \fBttcn3.el\fR and makes
+\fBtm.el\fR a function library instead of a major
+mode.
+.PP
+Version 0.1 released on 2000\-03\-31. Initial release.

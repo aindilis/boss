@@ -1,0 +1,43 @@
+#!/usr/bin/perl -w
+
+use Manager::Dialog qw(ApproveCommands);
+use PerlLib::EasyPersist;
+
+use Data::Dumper;
+use IO::File;
+
+# use task1 to get a list of all of the files to search
+# actually, I think boss already has something like this
+
+my $persist = PerlLib::EasyPersist->new;
+my $overwrite = 1;
+my $scripts = $persist->Get
+  (
+   Command => "`boss list_scripts`",
+   Overwrite => $overwrite,
+  );
+
+my $modules = $persist->Get
+  (
+   Command => "`boss list_modules`",
+   Overwrite => $overwrite,
+  );
+
+# print Dumper([$scripts,$modules]);
+die unless ($scripts->{Success} and $modules->{Success});
+
+my $fh = IO::File->new;
+$fh->open("> /var/lib/myfrdcsa/codebases/internal/boss/data/namazu/target") or die "cannot open target\n";
+print $fh $scripts->{Result};
+foreach my $line (split /\n/, $modules->{Result}) {
+  print $fh "/usr/share/perl5/$line\n"
+}
+
+$fh->close;
+
+# now build the file for namazu to take as input, then build the index
+
+ApproveCommands
+  (
+   Commands => ["cd /var/lib/myfrdcsa/codebases/internal/boss/data/namazu && mknmz -a -F target -f /var/lib/myfrdcsa/codebases/internal/boss/scripts/namazu/mknmzrc"],
+  );

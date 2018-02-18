@@ -1,0 +1,18 @@
+#!/usr/bin/perl -w
+
+use BOSS;
+use UniLang::Agent::Agent;
+use UniLang::Util::Message;
+
+$UNIVERSAL::agent = UniLang::Agent::Agent->new
+  (Name => "BOSS",
+   ReceiveHandler => \&Receive);
+$UNIVERSAL::boss = BOSS->new();
+
+sub Receive {
+  my %args = @_;
+  $UNIVERSAL::boss->ProcessMessage
+    (Message => $args{Message});
+}
+
+$UNIVERSAL::boss->Execute;

@@ -1,0 +1,73 @@
+(add those features to RADAR, basically, start by making a specialized
+search engine component)
+
+(use perltidy to create the language learner mode from the parser)
+
+(need to  create ontology  of where information  can go.  I  mean, for
+instance,  that it  can be  inserted into  such and  such  a document,
+etc.+)
+
+(should  write program  to  thoroughly explore  existing programs  for
+their semantics, and make sure the user knows this, for instance, with
+Perl,  it should  look  at what  programming  constructs are  actually
+used.)
+
+(Read more about advanced debian packaging.)
+
+(read  the   www.opencyc.org/faq  to  learn   the  difference  between
+knowledge and data.)
+
+(what is the minimum ammount of work that needs to be done to get this
+stuff to work?)
+
+(I have been concentrating a lot lately on learning perl and java, but
+shouldn't I concentrate some on getting everything else set-up?)
+
+(the files ought to be copied  over, using the network, so we ought to
+detach from the network for a second)
+
+(the cd needs  to be rebuilt, since  it is not nearly as  large on the
+outside as on the inside.)
+
+(the unilang  project needs to be  update with corpus  of thoughts and
+notes)
+
+(the myfrdcsa flow needs to  be finished.  This documents the pipeline
+of various objects through the digestive system.)
+
+(need to write the gourmet system, which depends on testing nut, etc.)
+
+(Got  to have  some way  of capturing  possible semantics  for problem
+solvers, i.e. features  or solutions to problems we  hadn't thought of
+yet, but of which we have read.)
+
+(Meaningful  measures  of  computation,  such as  comparison  to  real
+problems, not artificial ones like matrix math or game playing.)
+
+(Complete   temperature  sensing,   integrated   into  entire   health
+journals.)
+
+(As  part  of  PSE,  but  not  really PSE,  decisions  ought  to  show
+consequence  graphs and  probability  distributions, etc,  as well  as
+query information, such as expected performance, for all operations)
+
+(ought to have libraries of data structure run times, etc.)
+
+(ought to fix loose eth cable prevent it from being crushed.)
+
+(work on typing tutor)
+
+(get exercise equipment)
+
+(get more flavored drinks, possibly put machine in here to dispense water)
+
+(get microwave)
+
+(get slippers) (get trashcan) 
+
+(get laundry system implemented, why not make this part of the system,
+suppose someone has a disability that makes it hard for them to do and
+remember laundry.  in fact hygene management might be a useful feature
+as it is in some sense related to health.)
+
+(improve my ergonomics.)

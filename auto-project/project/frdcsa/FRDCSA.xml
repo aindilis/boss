@@ -1,0 +1,65 @@
+<system>
+  <title>Boosting Open Source Software (BOSS)</title>
+  <short-description>
+    A software engineering manager for project management.
+  </short-description>
+  <medium-description>
+    BOSS handles certain aspects of software development, from mundane
+    code like  responsibilities to higher  level planning.  Similarly,
+    several  databases  about  the  software, possibly  including  the
+    Microtheories   and   assertion   databases  regarding   developed
+    software,  are   maintained  using  BOSS.   In   the  future  more
+    managerial type tasks will be assumed.
+  </medium-description>
+  <long-description>
+
+  </long-description>
+
+  <synonyms>
+    Software  Engineer,  Developer,  Leader, Boss,  Manager,  Software
+    Engineering Manager, Project Management
+  </synonyms>
+
+  <features>
+    <feature>
+      Is a  Debian  package.
+    </feature>  
+    <feature>
+      It is an agent,  which communicates over (UniLang/FL/etc.) which
+      is responsible  for several tasks related to  source and project
+      management/development.
+    </feature>
+    <feature>
+      Handle setup of preferences for tools used in creating software.
+    </feature>
+    <feature>
+      Ability   to    create   project,   or   to    run   tests   and
+      recommend/implement  changes to project  structure to  make them
+      compatible with our development model.
+    </feature>
+    <feature>
+      Have  an  update-rc.d like  system  that  handles the  following
+      things: It scans  a project for information about  hooks that it
+      must register with the system  BEFORE they get packaged, so that
+      we can test,  develop and use these features,  without having to
+      build and install the package for every single change, i.e.
+    </feature>
+    <feature>
+      Yet, when the package is installed, it intelligent selects which
+      hooks ought to  be activated between the package  and the source
+      system, on certain criteria, and allows hot swapping.
+    </feature>
+    <feature>
+      Create an FRDCSA distribution CD or DVD on demand.  Perhaps, use
+      KNOPPIX as a starter.
+    </feature>
+  </features>
+  <todolist>
+    <todo>
+      Make sure the Emacs source file is autoloaded from Emacs
+    </todo>
+    <todo>Make sure the binaries are linked to in the path.</todo>
+    <todo>Make sure the documentation is indexed.</todo>
+    <todo>Make sure the Perl Modules are in @INC.</todo>
+  </todolist>
+</system>

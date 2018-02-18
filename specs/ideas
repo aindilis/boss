@@ -1,0 +1,31 @@
+subProject
+
+all FRDCSASources are Projects
+CapabilityRequests
+
+either we are developing the codebase or we aren't
+if we are, then boss handles its storage, etc, and maintaining the duality.
+
+each project has a list of capabilities, requirements, features, etc.
+BOSS tracks the status
+
+we request  that we have the  ability to track  capabilities.  we also
+request that we have  DRM.  We do not need to declare  a new system or
+project  for   each  new  capability.   Capabilities   can  be  formed
+dynamically and automatically, and can be extracted from websites.
+
+A  project  consists   of  a  set  of  goals,   capabilities,  and  an
+implementation.
+
+(Software to handle reputation management in general.)
+
+
+
+
+here is the way this system works.
+
+we have a capabilities management system
+
+object software-system
+
+requirements

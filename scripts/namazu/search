@@ -1,0 +1,81 @@
+#!/usr/bin/perl -w
+
+use Manager::Dialog qw(ApproveCommands);
+
+use Data::Dumper;
+use String::ShellQuote;
+# use Term::ReadKey;
+
+# my ($a,$b,$c,$d) = GetTerminalSize();
+# print  Dumper([$a,$b,$c,$d]);
+# exit(0);
+
+my $commands = "namazu -n 1000 -f /var/lib/myfrdcsa/codebases/internal/boss/scripts/namazu/namazurc ".shell_quote($ARGV[0]);
+my $res = `$commands`;
+
+$res =~ s/.*Total .+? documents matching your query.\s+//s;
+$res =~ s/\s+Current List: \d+ - \d+\s+//s;
+
+foreach my $item (split /\n{3,10}/,$res) {
+  # print Dumper($item);
+  # my @items = $res =~ /^(\d+). (.+?) \(score: (\d+)\)\nAuthor: (.+?)\nDate: (.+)\n(.+?)$(.+) \([\d,]+ bytes\).*/g;
+  my ($line_score,$line_author,$line_date,$line_context,$line_file) = split /\n/, $item;
+  my ( $id, $head, $score, $author, $date, $context, $filename, $size, );
+  if ($line_score =~ /^(\d+)\. (.+?) \(score: (\d+)\)$/) {
+    $id = $1;
+    $head = $2;
+    $score =$3;
+  }
+  if ($line_author =~ /^Author: (.+)$/) {
+    $author = $1;
+  }
+  if ($line_date =~ /^Date: (.+)$/) {
+    $date = $1;
+  }
+  $context = $line_context;
+  if ($line_file =~ /^(.+) \(([\d,]+) bytes\)$/) {
+    $filename = $1;
+    $size = $2;
+  }
+  my $structure =
+    {
+     Id => $id,
+     Head => $head,
+     Score => $score,
+     Author => $author,
+     Date => $date,
+     Context => $context,
+     Filename => $filename,
+     Size => $size,
+    };
+  my $termwidth = 211;
+  my $fn = $structure->{Filename};
+  my $ct = $structure->{Context};
+  my $length = length($fn);
+  my $cutoff = $termwidth - $length - 2;
+  if ($cutoff < 0) {
+    my $substr = substr($fn,0,$termwidth);
+    my $wtf = length($substr);
+    print Dumper({
+		  L => $length,
+		  C => $cutoff,
+		  F => $fn,
+		  C1 => $ct,
+		  S => $substr,
+		  W => $wtf,
+		 }) if 0;
+    print $substr."\n";
+  } else {
+    my $substr = substr($ct,0,$cutoff);
+    my $wtf = length($substr);
+    print Dumper({
+		  L => $length,
+		  C => $cutoff,
+		  F => $fn,
+		  C1 => $ct,
+		  S => $substr,
+		  W => $wtf,
+		 }) if 0;
+    print $fn.": ".$substr."\n";
+  }
+}
